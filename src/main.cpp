@@ -1,11 +1,24 @@
 #include <iostream>
 #include <string>
+#include "Body.h"
+
+using std::cout;
+using std::endl;
 
 int main(int argc, char* argv[])
 {
-  std::cout << "*******************************" << std::endl;
-  std::cout << "*** Welcome to Proteus 6DOF ***" << std::endl;
-  std::cout << "*******************************" << std::endl;
+  cout << "*******************************" << endl;
+  cout << "*** Welcome to Proteus 6DOF ***" << endl;
+  cout << "*******************************" << endl;
+
+  Body Body("default", M_PI*0.25, M_PI*0.25, M_PI*0.25);
+
+  const Eigen::Quaterniond& quat = Body.getQuat();
+
+  cout << quat.w() << endl;
+  cout << quat.x() << endl;
+  cout << quat.y() << endl;
+  cout << quat.z() << endl;
 
   return 0;
-}
+};

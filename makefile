@@ -4,7 +4,7 @@ CXX_OPTS = -O3
 EXE_SOLVER = ./bin/6dof.x
 EXE_TESTS = ./bin/tests.x
 
-SRCS_SOLVER = ./src/main.cpp
+SRCS_SOLVER = ./src/main.cpp ./src/Body.cpp
 SRCS_TEST = ./tests/main.cpp
 
 OBJS_SOLVER = $(SRCS_SOLVER:.cpp=.o)
@@ -14,10 +14,10 @@ GTESTDIR = ./TPLs/gtest/gtest-1.7.0/
 GTEST_LIB = $(GTESTDIR)/lib
 GTEST_INCLUDES = $(GTESTDIR)/include
 
-EIGENDIR = ./TPLs/eigen/eigen-3.2.4
-EIGEN_INCLUDES = $(EIGENDIR)/include
+EIGENDIR = ./TPLs/eigen/eigen-3.2.4/
+EIGEN_INCLUDES = $(EIGENDIR)
 
-INCLUDES = -I$(GTEST_INCLUDES) -I$(EIGEN_INCLUDES)
+INCLUDES = -I$(GTEST_INCLUDES) -I$(EIGEN_INCLUDES) -I./src
 
 CXXLIBS = -lstdc++
 LCXXFLAGS = -L$(GTEST_LIB)
@@ -45,7 +45,8 @@ clean:
 	rm $(OBJS_SOLVER); \
 	rm $(OBJS_TEST); \
 	rm $(EXE_SOLVER); \
-	rm $(EXE_TESTS); 
+	rm $(EXE_TESTS); \
+	rm Make.depend
 
 Make.depend:
 	$(CXX) -MM $(INCLUDES) $(SRCS_SOLVER) $(SRCS_TESTS) > Make.depend
