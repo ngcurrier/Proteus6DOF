@@ -1,5 +1,5 @@
-Make.depend
-bin/*.x
+#Ignore all of the files below here, most are just build noise from TPLs
+[^.]*
 
 # Compiled Object files
 *.slo
