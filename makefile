@@ -4,7 +4,7 @@ CXX_OPTS = -O3
 EXE_SOLVER = ./bin/6dof.x
 EXE_TESTS = ./bin/tests.x
 
-SRCS_SOLVER = ./src/main.cpp ./src/Body.cpp
+SRCS_SOLVER = ./src/main.cpp 
 SRCS_TEST = ./tests/main.cpp
 
 OBJS_SOLVER = $(SRCS_SOLVER:.cpp=.o)

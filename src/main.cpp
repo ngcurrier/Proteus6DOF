@@ -11,9 +11,9 @@ int main(int argc, char* argv[])
   cout << "*** Welcome to Proteus 6DOF ***" << endl;
   cout << "*******************************" << endl;
 
-  Body Body("default", M_PI*0.25, M_PI*0.25, M_PI*0.25);
+  Body<double> Body("default", M_PI*0.25, M_PI*0.25, M_PI*0.25);
 
-  const Eigen::Quaterniond& quat = Body.getQuat();
+  const Eigen::Quaternion<double>& quat = Body.getQuat();
 
   cout << quat.w() << endl;
   cout << quat.x() << endl;
