@@ -25,7 +25,6 @@ int main(int argc, char* argv[])
 
   
   Body Body("default", M_PI*0.25, M_PI*0.25, M_PI*0.25, masses, locations);
-
   const Eigen::Quaterniond& quat = Body.getQuat();
 
   cout << quat.w() << endl;

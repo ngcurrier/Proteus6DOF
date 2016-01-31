@@ -5,7 +5,7 @@ EXE_SOLVER = ./bin/6dof.x
 EXE_TESTS = ./bin/tests.x
 
 SRCS_SOLVER = ./src/main.cpp ./src/Body.cpp
-SRCS_TEST = ./tests/main.cpp
+SRCS_TEST = ./tests/main.cpp ./src/Body.cpp
 
 OBJS_SOLVER = $(SRCS_SOLVER:.cpp=.o)
 OBJS_TEST = $(SRCS_TEST:.cpp=.o)

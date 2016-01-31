@@ -3,6 +3,9 @@
 #include <Eigen/Geometry>
 #include <vector>
 
+#ifndef BODY_H__
+#define BODY_H__
+
 using std::cout;
 using std::endl;
 
@@ -43,3 +46,6 @@ private:
   std::vector<Eigen::Vector3d> locations;  //list of point mass locations in body frame (m)
   double totalMass; //kg
 };
+
+
+#endif
