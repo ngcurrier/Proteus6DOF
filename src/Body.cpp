@@ -18,6 +18,10 @@ Body::Body(std::string name, double angleX, double angleY, double angleZ,
     totalMass += m;
     ++imass;
   }
+  CG(0) /= totalMass;
+  CG(1) /= totalMass;
+  CG(2) /= totalMass;
+  
 
   cout << "\nBody CG:\n" << CG << endl;
   
